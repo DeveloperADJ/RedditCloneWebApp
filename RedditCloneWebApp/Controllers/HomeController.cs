@@ -22,6 +22,20 @@ namespace RedditCloneWebApp.Controllers
             return View(postRepository.Read());
         }
 
+        [Route("Upvote")]
+        public IActionResult Upvote(int id)
+        {
+            postRepository.Upvote(id);
+            return RedirectToAction("Index");
+        }
+
+        [Route("Downvote")]
+        public IActionResult Downvote(int id)
+        {
+            postRepository.Downvote(id);
+            return RedirectToAction("Index");
+        }
+
         [Route("CreatePost")]
         public IActionResult CreatePost(string Title, string Url)
         {

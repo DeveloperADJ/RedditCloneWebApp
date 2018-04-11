@@ -12,5 +12,7 @@ namespace RedditCloneWebApp.Repositories
         List<Post> Read();
         void Update();
         void Delete();
+        void Upvote(int id);
+        void Downvote(int id);
     }
 }

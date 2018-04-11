@@ -7,7 +7,7 @@
     <h1>Trending Posts</h1>
     <table>
         <tr>
-            <td>ID</td>
+            <td>Upvotes</td>
             <td>Upvote</td>
             <td>Downvote</td>
             <td><p>Post title</p></td>
@@ -15,10 +15,10 @@
         @foreach (var post in @Model)
         {
             <tr>
-                <td>@post.Id</td>
-                <td><a href="#">+</a></td>
-                <td><a href="#">-</a></td>
-                <td>@post.Title</td>
+                <td>@post.Upvotes</td>
+                <td><a href="Upvote?id=@post.Id">+</a></td>
+                <td><a href="Downvote?id=@post.Id">-</a></td>
+                <td><a href="@post.Url"> @post.Title</a></td>
             </tr>
         }
     </table>

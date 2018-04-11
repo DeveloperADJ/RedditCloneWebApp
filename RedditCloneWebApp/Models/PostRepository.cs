@@ -33,5 +33,19 @@ namespace RedditCloneWebApp.Models
         public void Update()
         {
         }
+
+        public void Upvote(int id)
+        {
+            Post post = postContext.Posts.FirstOrDefault(x => x.Id == id);
+            post.Upvotes++;
+            postContext.SaveChanges();
+        }
+
+        public void Downvote(int id)
+        {
+            Post post = postContext.Posts.FirstOrDefault(x => x.Id == id);
+            post.Upvotes--;
+            postContext.SaveChanges();
+        }
     }
 }

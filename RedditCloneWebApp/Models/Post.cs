@@ -8,7 +8,7 @@ namespace RedditCloneWebApp.Models
     public class Post
     {
         public int Id { get; set; }
-        public int Votes { get; set; }
+        public int Upvotes { get; set; }
         public string Title { get; set; }
         public string Url { get; set; }
     }
