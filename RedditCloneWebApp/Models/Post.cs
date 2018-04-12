@@ -11,5 +11,6 @@ namespace RedditCloneWebApp.Models
         public int Upvotes { get; set; }
         public string Title { get; set; }
         public string Url { get; set; }
+        public DateTime TimeStamp { get; set; }
     }
 }

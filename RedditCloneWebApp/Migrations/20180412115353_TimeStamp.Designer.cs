@@ -11,9 +11,10 @@ using System;
 namespace RedditCloneWebApp.Migrations
 {
     [DbContext(typeof(PostContext))]
-    partial class PostContextModelSnapshot : ModelSnapshot
+    [Migration("20180412115353_TimeStamp")]
+    partial class TimeStamp
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

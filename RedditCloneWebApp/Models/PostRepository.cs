@@ -17,15 +17,19 @@ namespace RedditCloneWebApp.Models
 
         public void Create(string title, string url)
         {
-            postContext.Add(new Post { Title = title, Url = url});
+            postContext.Add(new Post { Title = title, Url = url, TimeStamp = DateTime.Now
+        });
             postContext.SaveChanges();
         }
 
-        public void Delete()
+        public void Delete(int id)
         {
+            Post post = postContext.Posts.FirstOrDefault(x => x.Id == id);
+            postContext.Remove(post);
+            postContext.SaveChanges();
         }
 
-        public List<Post> Read()
+        public List<Post> Read ()
         {
             return postContext.Posts.ToList();
         }
