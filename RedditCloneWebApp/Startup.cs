@@ -20,16 +20,9 @@ namespace RedditCloneWebApp
         {
             services.AddScoped<IPostRepository, PostRepository>();
             services.AddMvc();
-            if (Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT").Equals("Development"))
-            {
-                services.AddDbContext<PostContext>(options =>
-   options.UseSqlServer(Environment.GetEnvironmentVariable("CONNECTIONSTRING")));
-            }
-            else
-            {
                 services.AddDbContext<PostContext>(options =>
    options.UseNpgsql(Environment.GetEnvironmentVariable("CONNECTIONSTRING")));
-            }
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
