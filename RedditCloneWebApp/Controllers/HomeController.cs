@@ -19,7 +19,7 @@ namespace RedditCloneWebApp.Controllers
         [Route("Index")]
         public IActionResult Index()
         {
-            return View(postRepository.Read().OrderByDescending(x=>x.Upvotes));
+            return View(postRepository.Read().OrderByDescending(x=>x.TimeStamp));
         }
 
         [Route("Delete/{id}")]

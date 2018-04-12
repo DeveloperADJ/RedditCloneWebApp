@@ -1,6 +1,6 @@
 ﻿<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Reddit</title>
+    <title>Arno's Super Reddit</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -43,9 +43,9 @@
     </form>*@
     <table class="table">
         <tr>
-            <td>Upvotes</td>
-            <td>Thumbnail</td>
-            <td><p>Title</p></td>
+            <th>Upvotes</th>
+            <th>Thumbnail</th>
+            <th><p>Title</p></th>
         </tr>
         @foreach (var post in @Model)
         {
@@ -56,7 +56,7 @@
                     <a href="Downvote?id=@post.Id"><i class="fa fa-angle-down"></i></a>
                 </td>
                 <td>
-                    <img src="@post.Url" alt="Alternate Text" />
+                    <img src="@post.Url" alt="No Image Found" />
                 </td>
                 <td>
                     <a target="_blank" href="@post.Url"> @post.Title</a><p>Submitted on @post.TimeStamp</p>
