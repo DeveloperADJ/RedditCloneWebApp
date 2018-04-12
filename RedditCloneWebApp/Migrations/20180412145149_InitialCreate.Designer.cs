@@ -11,20 +11,22 @@ using System;
 namespace RedditCloneWebApp.Migrations
 {
     [DbContext(typeof(PostContext))]
-    [Migration("20180411154134_Upvotes")]
-    partial class Upvotes
+    [Migration("20180412145149_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.0.2-rtm-10011")
-                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn)
+                .HasAnnotation("ProductVersion", "2.0.2-rtm-10011");
 
             modelBuilder.Entity("RedditCloneWebApp.Models.Post", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
+
+                    b.Property<DateTime>("TimeStamp");
 
                     b.Property<string>("Title");
 

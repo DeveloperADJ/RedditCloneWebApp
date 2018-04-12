@@ -22,7 +22,7 @@ namespace RedditCloneWebApp.Controllers
             return View(postRepository.Read().OrderByDescending(x=>x.Upvotes));
         }
 
-        [Route("Delete")]
+        [Route("Delete/{id}")]
         public IActionResult Delete(int id)
         {
             postRepository.Delete(id);
