@@ -1,0 +1,37 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Comments</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        img {
+            width: 30%;
+        }
+    </style>
+</head>
+<body>
+    <a href="../Index">Back</a>
+    <h1>@Model.Title</h1>
+    <img onerror="this.src='https://cdn.shopify.com/s/files/1/0095/4332/t/30/assets/no-image.svg?10954908075607682269'" src="@Model.Url" alt="Alternate Text" />
+
+
+    <table class="table">
+        <tr>
+            <th>Comments</th>
+        </tr>
+        @for (int i = 0; i < 5; i++)
+        {
+            <tr>
+                <td>
+                By Unknown <br />
+                "example comment @i"
+                </td>
+            </tr>
+        }
+    </table>
+
+</body>
+</html>

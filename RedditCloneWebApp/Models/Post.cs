@@ -12,5 +12,7 @@ namespace RedditCloneWebApp.Models
         public string Title { get; set; }
         public string Url { get; set; }
         public DateTime TimeStamp { get; set; }
+        public List<Comment> Comments { get; set; }
+        //public string Username { get; set; }
     }
 }

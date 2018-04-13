@@ -10,6 +10,7 @@
         * {
             margin: 1%;
         }
+
         img {
             width: 100px;
         }
@@ -22,14 +23,13 @@
             color: darkgrey;
         }
 
-        #logo{
+        #logo {
             width: 20%;
         }
 
-        #copyright{
+        #copyright {
             color: gainsboro;
         }
-
     </style>
 </head>
 <body>
@@ -38,9 +38,9 @@
     </div>
     <a id="submitButton" class="btn btn-success" href="Submit">Submit new post</a>
     @*<form class="form-inline" action="List" method="post">
-        <input class="form-control mr-sm-2" name="searchWord" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>*@
+            <input class="form-control mr-sm-2" name="searchWord" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>*@
     <table class="table">
         <tr>
             <th>Upvotes</th>
@@ -60,7 +60,7 @@
                 </td>
                 <td>
                     <a target="_blank" href="@post.Url"> @post.Title</a><p>Submitted on @post.TimeStamp</p><a href="Comments/@post.Id">Comments</a>
-                    @*<a href="Delete/@post.Id">Delete</a>*@
+                    <a href="Delete/@post.Id">Delete</a>
                 </td>
             </tr>
         }
